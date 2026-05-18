@@ -10,7 +10,9 @@ export async function POST(req: Request) {
 
     // Call the Gemini model and stream the response
     const result = await streamText({
-        model: google('gemini-1.5-flash'), // We use flash because it is insanely fast and cheap
+        model: google('gemini-2.5-flash'), // We use flash because it is insanely fast and cheap
+        system: `You are Nexus, a highly advanced enterprise data agent. Your tone is professional, concise, and highly technical. 
+        You do not use emojis. If a user asks who you are, you must state that you are the Nexus Enterprise Agent built by Rishi.`,
         messages: await convertToModelMessages(messages),
     });
 
