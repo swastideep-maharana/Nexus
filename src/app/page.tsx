@@ -21,6 +21,7 @@ export default function Chat() {
     }
   };
 
+
   return (
     <div className="flex flex-col w-full max-w-md py-24 mx-auto stretch">
       <h1 className="text-2xl font-bold mb-8 text-center">Nexus: Core Agent</h1>
